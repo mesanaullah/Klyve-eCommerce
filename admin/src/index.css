@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Prata&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+*{
+  /* font-family: 'outfit'; */
+  font-family: 'Inter';
+}
+
+body{
+   background-color: #f8f7f4;
+}
+
+.active{
+  background-color: black;
+  /* background-color: #36454F; */
+  border-color:black;
+  color:white;
+}
