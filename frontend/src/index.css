@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Prata&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+*{
+  /* font-family: 'outfit'; */
+  font-family: 'Inter';
+}
+
+body{
+   background-color: #f8f7f4;
+}
+
+.raleway-logo {
+  font-family: "Raleway", sans-serif;
+}
+
+.prata-regular {
+  font-family: "Prata", serif;
+  /* font-family: "Canela", serif; */
+  font-weight: 400;
+  font-style: normal;
+}
+
+a.active hr{
+  display: block;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+@media (max-width: 640px){
+  a.active{
+    background-color: black;
+    color: white;
+  }
+}
