@@ -4,8 +4,8 @@ import { NavLink, Link } from 'react-router-dom'
 import { GoSearch } from "react-icons/go";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { SlUser } from "react-icons/sl";
-import { BiMenuAltRight } from "react-icons/bi";
 import { MdArrowRight } from "react-icons/md";
+import { IoReorderThreeOutline } from "react-icons/io5";
 import { GoHeart } from "react-icons/go";
 import { ShopContext } from '../context/ShopContext';
 
@@ -99,7 +99,7 @@ const Navbar = () => {
                 </div>
 
                 {/* <img src={assets.menu_icon} className='w-5 mx-4 cursor-pointer sm:hidden' alt="" /> */}
-                <BiMenuAltRight onClick={() => setVisible(true)} className='w-6 h-6 cursor-pointer sm:hidden' />
+                <IoReorderThreeOutline onClick={() => setVisible(true)} className='w-6 h-6 cursor-pointer sm:hidden' />
             </div>
             {/* side bar menu for small screen */}
 
@@ -110,6 +110,8 @@ const Navbar = () => {
                         <p>Back</p>
                     </div>
                     <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/'>HOME</NavLink>
+                    <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/men'>Men</NavLink>
+                    <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/women'>Women</NavLink>
                     <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/collection'>COLLECTION</NavLink>
                     <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/about'>ABOUT</NavLink>
                     <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/contact'>CONTACT</NavLink>
