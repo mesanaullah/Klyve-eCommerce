@@ -11,8 +11,8 @@ const Footer = () => {
 
                 {/* column 1 */}
                 <div>
-                    {/* <img src={assets.logo} className='mb-5 w-32' alt="" /> */}
-                    <p className='mb-5 raleway-logo text-4xl tracking-wider font-medium text-[#2F2F2F]'>KLYVE</p>
+                    <img src={assets.logo_2} className='mb-5 w-32' alt="" />
+                    {/* <p className='mb-5 raleway-logo text-4xl tracking-wider font-medium text-[#2F2F2F]'>KLYVE</p> */}
 
                     <p className='w-full sm:w-2/3 text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, eligendi excepturi, quisquam quam nobis tenetur laborum a dolores facere placeat sint commodi nemo deleniti, doloribus maiores nam nesciunt dicta perferendis! Possimus eveniet voluptas omnis quidem accusamus nostrum adipisci modi libero?</p>
                 </div>

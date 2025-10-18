@@ -61,14 +61,14 @@ const Navbar = () => {
             </ul>
             {/* LOGO */}
             <Link to='/'>
-                {/* <img src={assets.KLYVE} className='w-36' alt="" /> */}
-                <p className='raleway-logo text-3xl tracking-wider font-medium text-[#2F2F2F]'>KLYVE</p>
+                <img src={assets.logo_2} className='w-28' alt="" />
+                {/* <p className='raleway-logo text-3xl tracking-wider font-medium text-[#2F2F2F]'>KLYVE</p> */}
             </Link>
 
             <div className='flex items-center gap-4 sm:gap-6'>
 
                 {/* Search icon */}
-                <GoSearch onClick={() => setShowSearch(true)} className="w-6 h-6 cursor-pointer" />
+                <GoSearch onClick={() => { setShowSearch(true); navigate('/collection') }} className="w-6 h-6 cursor-pointer" />
                 {/* <GoSearch className="w-5 sm:w-6 h-5 sm:h-6 cursor-pointer" /> */}
 
                 {/* Wishlist */}
@@ -101,9 +101,12 @@ const Navbar = () => {
                 {/* <img src={assets.menu_icon} className='w-5 mx-4 cursor-pointer sm:hidden' alt="" /> */}
                 <IoReorderThreeOutline onClick={() => setVisible(true)} className='w-6 h-6 cursor-pointer sm:hidden' />
             </div>
+
+
             {/* side bar menu for small screen */}
 
-            <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${Visible ? 'w-full' : 'w-0'}`}>
+            <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all  ${Visible ? 'w-full' : 'w-0'}`}>
+            {/* <div className={'fixed inset-0 bg-background/95 backdroup-blur-md z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden'}> */}
                 <div className='flex flex-col text-[#2F2F2F]'>
                     <div onClick={() => setVisible(false)} className='flex items-center p-4'>
                         <MdArrowRight className='cursor-pointer align-middle w-8 h-8 rotate-180' />
