@@ -22,9 +22,12 @@ const Hero = () => {
             </div>
 
             {/* Hero Right side */}
-            <NavLink to='' className='w-full sm:w-1/2 cursor-ponter'>
-                <img src={assets.hero_img} alt="" />
-                {/* <img  src='/src/IMG/banner.jpg' alt="" /> */}
+            <NavLink to='' className='w-full sm:w-1/2 cursor-pointer'>
+                {/* <img src={assets.hero_img} alt="" /> */}
+                <img
+                    className='w-full h-auto object-cover'
+                    src='/src/IMG/banner.jpg' alt=""
+                />
             </NavLink>
         </div>
     )
