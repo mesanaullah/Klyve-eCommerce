@@ -41,7 +41,7 @@ const Navbar = () => {
 
 
     return (
-        <div className='relative flex items-center justify-between py-5 font-medium '>
+        <div className='relative flex items-center justify-between py-5 font-medium border-b border-gray-300'>
 
             {/* Menu icon for mobile */}
             <div className='flex items-center gap-4 sm:hidden'>
