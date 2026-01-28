@@ -1,7 +1,7 @@
 import React from 'react'
 import { assets } from '../assets/assets'
 import { NavLink } from 'react-router-dom'
-import IMG from '../IMG/banner.jpg'
+// import IMG from '../IMG/banner.jpg'
 
 const Hero = () => {
     return (
@@ -26,7 +26,7 @@ const Hero = () => {
                 {/* <img src={assets.hero_img} alt="" /> */}
                 <img
                     className='w-full h-auto object-cover'
-                    src='/src/IMG/banner.jpg' alt=""
+                    src='/IMG/banner.jpg' alt=""
                 />
             </NavLink>
         </div>
