@@ -47,7 +47,7 @@ const Navbar = () => {
             {/* Menu icon for mobile */}
             <div className='flex items-center gap-4 sm:hidden'>
                 <TextAlignJustify onClick={() => setVisible(true)} className='w-6 h-6 cursor-pointer' />
-{/* <TextAlignJustify /> */}
+                
                 {/* Search icon */}
                 <GoSearch onClick={() => { setShowSearch(true); navigate('/collection') }} className="w-6 h-6 cursor-pointer" />
 
