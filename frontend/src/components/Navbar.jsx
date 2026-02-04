@@ -3,6 +3,7 @@ import { assets } from '../assets/assets'
 import { NavLink, Link } from 'react-router-dom'
 import { GoSearch } from "react-icons/go";
 import { HiOutlineShoppingBag, HiOutlineUserCircle, HiOutlineBars4 } from "react-icons/hi2";
+import { TextAlignJustify } from 'lucide-react';
 import { MdArrowRight } from "react-icons/md";
 import { GoHeart } from "react-icons/go";
 import { ShopContext } from '../context/ShopContext';
@@ -45,8 +46,8 @@ const Navbar = () => {
 
             {/* Menu icon for mobile */}
             <div className='flex items-center gap-4 sm:hidden'>
-                <HiOutlineBars4 onClick={() => setVisible(true)} className='w-6 h-6 cursor-pointer' />
-
+                <TextAlignJustify onClick={() => setVisible(true)} className='w-6 h-6 cursor-pointer' />
+{/* <TextAlignJustify /> */}
                 {/* Search icon */}
                 <GoSearch onClick={() => { setShowSearch(true); navigate('/collection') }} className="w-6 h-6 cursor-pointer" />
 
