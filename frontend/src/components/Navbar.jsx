@@ -196,12 +196,12 @@ const Navbar = () => {
                         <ChevronRight className='cursor-pointer align-middle w-5 h-5 rotate-180' />
                         <p>Back</p>
                     </div>
-                    <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border-b border-gray-200' to='/'>HOME</NavLink>
-                    <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border-b border-gray-200' to='/men'>MEN</NavLink>
-                    <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border-b border-gray-200' to='/women'>WOMEN</NavLink>
-                    <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border-b border-gray-200' to='/collection'>COLLECTION</NavLink>
+                    <NavLink onClick={() => setVisible(false)} className='py-3 pl-6 border-b border-gray-200' to='/'>HOME</NavLink>
+                    <NavLink onClick={() => setVisible(false)} className='py-3 pl-6 border-b border-gray-200' to='/men'>MEN</NavLink>
+                    <NavLink onClick={() => setVisible(false)} className='py-3 pl-6 border-b border-gray-200' to='/women'>WOMEN</NavLink>
+                    <NavLink onClick={() => setVisible(false)} className='py-3 pl-6 border-b border-gray-200' to='/collection'>COLLECTION</NavLink>
                     {/* <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border-b border-gray-200' to='/wishlist'>WISHLIST</NavLink> */}
-                    <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border-b border-gray-200' to='/cart'>CART</NavLink>
+                    <NavLink onClick={() => setVisible(false)} className='py-3 pl-6 border-b border-gray-200' to='/cart'>CART</NavLink>
 
 
                     {token && (
@@ -210,7 +210,7 @@ const Navbar = () => {
                             {/* PROFILE HEADER */}
                             <button
                                 onClick={() => setProfileOpen(prev => !prev)}
-                                className="w-full flex items-center justify-between px-6 py-2 font-medium"
+                                className="w-full flex items-center justify-between px-6 py-3 font-medium"
                             >
                                 <span>PROFILE</span>
                                 <span
@@ -230,7 +230,7 @@ const Navbar = () => {
                                 <NavLink
                                     to="/orders"
                                     onClick={() => setVisible(false)}
-                                    className="block px-8 py-2 border border-gray-200 text-sm"
+                                    className="block px-8 py-3 border border-gray-200 text-sm"
                                 >
                                     Orders
                                 </NavLink>
@@ -240,7 +240,7 @@ const Navbar = () => {
                                         setVisible(false);
                                         logout();
                                     }}
-                                    className="w-full text-left px-8 py-2 text-sm"
+                                    className="w-full text-left px-8 py-3 text-sm"
                                 >
                                     Logout
                                 </button>
