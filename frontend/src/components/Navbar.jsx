@@ -3,7 +3,7 @@ import { assets } from '../assets/assets'
 import { NavLink, Link } from 'react-router-dom'
 import { GoSearch } from "react-icons/go";
 import { HiOutlineShoppingBag, HiOutlineUserCircle, HiOutlineBars4 } from "react-icons/hi2";
-import { TextAlignJustify } from 'lucide-react';
+import { TextAlignJustify, ChevronDown, ChevronRight } from 'lucide-react';
 import { MdArrowRight } from "react-icons/md";
 import { GoHeart } from "react-icons/go";
 import { ShopContext } from '../context/ShopContext';
@@ -47,7 +47,7 @@ const Navbar = () => {
             {/* Menu icon for mobile */}
             <div className='flex items-center gap-4 sm:hidden'>
                 <TextAlignJustify onClick={() => setVisible(true)} className='w-6 h-6 cursor-pointer' />
-                
+
                 {/* Search icon */}
                 <GoSearch onClick={() => { setShowSearch(true); navigate('/collection') }} className="w-6 h-6 cursor-pointer" />
 
@@ -137,7 +137,7 @@ const Navbar = () => {
                                 <div
                                     className="
                                             absolute right-0 top-full pt-2
-                                            opacity-0 invisible pointer-events-none translate-y-2
+                                            opacity-0 invisible translate-y-2
                                             group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-hover:translate-y-0
                                             transition-all duration-200 ease-out
                                             bg-white rounded-lg shadow-2xl border border-gray-100
@@ -150,14 +150,14 @@ const Navbar = () => {
                                     <ul className="py-2 text-sm text-gray-600">
                                         <li
                                             onClick={() => navigate('/profile')}
-                                            className="px-5 py-3 cursor-pointer hover:bg-gray-50 hover:text-black transition"
+                                            className="px-4 py-2 cursor-pointer hover:bg-gray-50 hover:text-black transition"
                                         >
                                             My Profile
                                         </li>
 
                                         <li
                                             onClick={() => navigate('/orders')}
-                                            className="px-5 py-3 cursor-pointer hover:bg-gray-50 hover:text-black transition"
+                                            className="px-4 py-2 cursor-pointer hover:bg-gray-50 hover:text-black transition"
                                         >
                                             Orders
                                         </li>
@@ -166,7 +166,7 @@ const Navbar = () => {
 
                                         <li
                                             onClick={logout}
-                                            className="px-5 py-3 cursor-pointer text-red-500 hover:bg-red-50 transition"
+                                            className="px-4 py-2 cursor-pointer text-red-500 hover:bg-red-50 transition"
                                         >
                                             LogOut
                                         </li>
@@ -193,7 +193,7 @@ const Navbar = () => {
             <div className={`fixed top-0 left-0 h-full w-full bg-white z-50 transform transition-transform duration-300 ease-in-out ${Visible ? 'translate-x-0' : '-translate-x-full'}`}>
                 <div className='flex flex-col text-[#2F2F2F] text-sm'>
                     <div onClick={() => setVisible(false)} className='flex items-center p-4'>
-                        <MdArrowRight className='cursor-pointer align-middle w-8 h-8 rotate-180' />
+                        <ChevronRight className='cursor-pointer align-middle w-5 h-5 rotate-180' />
                         <p>Back</p>
                     </div>
                     <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border-b border-gray-200' to='/'>HOME</NavLink>
@@ -210,14 +210,15 @@ const Navbar = () => {
                             {/* PROFILE HEADER */}
                             <button
                                 onClick={() => setProfileOpen(prev => !prev)}
-                                className="w-full flex items-center justify-between px-6 py-4 font-medium"
+                                className="w-full flex items-center justify-between px-6 py-2 font-medium"
                             >
                                 <span>PROFILE</span>
                                 <span
                                     className={`transform transition-transform duration-300 ${profileOpen ? 'rotate-180' : ''
                                         }`}
                                 >
-                                    ▲
+                                    {/* ▲ */}
+                                    <ChevronDown />
                                 </span>
                             </button>
 
@@ -229,7 +230,7 @@ const Navbar = () => {
                                 <NavLink
                                     to="/orders"
                                     onClick={() => setVisible(false)}
-                                    className="block px-8 py-4 border border-gray-200 text-sm"
+                                    className="block px-8 py-2 border border-gray-200 text-sm"
                                 >
                                     Orders
                                 </NavLink>
@@ -239,7 +240,7 @@ const Navbar = () => {
                                         setVisible(false);
                                         logout();
                                     }}
-                                    className="w-full text-left px-8 py-4 text-sm"
+                                    className="w-full text-left px-8 py-2 text-sm"
                                 >
                                     Logout
                                 </button>
